@@ -8,13 +8,6 @@ import { ComponentElement } from '@websublime/wbs-ui-common';
 import { ComponentMetadata } from '@websublime/wbs-ui-common';
 import { Ref } from '@websublime/wbs-ui-common';
 import { TemplateResult } from 'lit-html';
-import { WebComponentOptions } from '@websublime/wbs-ui-common';
-
-// Warning: (ae-forgotten-export) The symbol "WsLoaderOptions" needs to be exported by the entry point index.d.ts
-//
-// @public (undocumented)
-const registerComponent: (options?: WsLoaderOptions, name?: string) => new () => WsLoader;
-export default registerComponent;
 
 // @public
 export class WsLoader extends ComponentElement {

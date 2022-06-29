@@ -1,0 +1,12 @@
+{
+    "name": "wbs-ui-common",
+    "version": "0.0.2",
+    "scope": "@websublime",
+    "repo": "websublime/sublime-ui",
+    "scripts": {
+        "main": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-common@0.0.2-SNAPSHOT/wbs-ui-common.cjs.js",
+        "esm": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-common@0.0.2-SNAPSHOT/wbs-ui-common.es.js"
+    },
+    "styles": [],
+    "docs": ""
+}

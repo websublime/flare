@@ -432,22 +432,27 @@ const uniqueID = () => {
  * Copyright 2019 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */
-const t = window.ShadowRoot && (window.ShadyCSS === void 0 || window.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, e$1 = Symbol(), n$2 = /* @__PURE__ */ new Map();
+const t = window.ShadowRoot && (window.ShadyCSS === void 0 || window.ShadyCSS.nativeShadow) && "adoptedStyleSheets" in Document.prototype && "replace" in CSSStyleSheet.prototype, e$1 = Symbol(), n$2 = /* @__PURE__ */ new WeakMap();
 class s$2 {
-  constructor(t2, n2) {
-    if (this._$cssResult$ = true, n2 !== e$1)
+  constructor(t2, n2, s2) {
+    if (this._$cssResult$ = true, s2 !== e$1)
       throw Error("CSSResult is not constructable. Use `unsafeCSS` or `css` instead.");
-    this.cssText = t2;
+    this.cssText = t2, this.t = n2;
   }
   get styleSheet() {
-    let e2 = n$2.get(this.cssText);
-    return t && e2 === void 0 && (n$2.set(this.cssText, e2 = new CSSStyleSheet()), e2.replaceSync(this.cssText)), e2;
+    let e2 = this.o;
+    const s2 = this.t;
+    if (t && e2 === void 0) {
+      const t2 = s2 !== void 0 && s2.length === 1;
+      t2 && (e2 = n$2.get(s2)), e2 === void 0 && ((this.o = e2 = new CSSStyleSheet()).replaceSync(this.cssText), t2 && n$2.set(s2, e2));
+    }
+    return e2;
   }
   toString() {
     return this.cssText;
   }
 }
-const o$2 = (t2) => new s$2(typeof t2 == "string" ? t2 : t2 + "", e$1), i = (e2, n2) => {
+const o$2 = (t2) => new s$2(typeof t2 == "string" ? t2 : t2 + "", void 0, e$1), i = (e2, n2) => {
   t ? e2.adoptedStyleSheets = n2.map((t2) => t2 instanceof CSSStyleSheet ? t2 : t2.styleSheet) : n2.forEach((t2) => {
     const n3 = document.createElement("style"), s2 = window.litNonce;
     s2 !== void 0 && n3.setAttribute("nonce", s2), n3.textContent = t2.cssText, e2.appendChild(n3);
@@ -495,18 +500,18 @@ const e = window.trustedTypes, r = e ? e.emptyScript : "", h = window.reactiveEl
 } }, n$1 = (t2, i2) => i2 !== t2 && (i2 == i2 || t2 == t2), l$1 = { attribute: true, type: String, converter: o$1, reflect: false, hasChanged: n$1 };
 class a extends HTMLElement {
   constructor() {
-    super(), this._$Et = /* @__PURE__ */ new Map(), this.isUpdatePending = false, this.hasUpdated = false, this._$Ei = null, this.o();
+    super(), this._$Ei = /* @__PURE__ */ new Map(), this.isUpdatePending = false, this.hasUpdated = false, this._$El = null, this.u();
   }
   static addInitializer(t2) {
     var i2;
-    (i2 = this.l) !== null && i2 !== void 0 || (this.l = []), this.l.push(t2);
+    (i2 = this.h) !== null && i2 !== void 0 || (this.h = []), this.h.push(t2);
   }
   static get observedAttributes() {
     this.finalize();
     const t2 = [];
     return this.elementProperties.forEach((i2, s2) => {
-      const e2 = this._$Eh(s2, i2);
-      e2 !== void 0 && (this._$Eu.set(e2, s2), t2.push(e2));
+      const e2 = this._$Ep(s2, i2);
+      e2 !== void 0 && (this._$Ev.set(e2, s2), t2.push(e2));
     }), t2;
   }
   static createProperty(t2, i2 = l$1) {
@@ -531,7 +536,7 @@ class a extends HTMLElement {
       return false;
     this.finalized = true;
     const t2 = Object.getPrototypeOf(this);
-    if (t2.finalize(), this.elementProperties = new Map(t2.elementProperties), this._$Eu = /* @__PURE__ */ new Map(), this.hasOwnProperty("properties")) {
+    if (t2.finalize(), this.elementProperties = new Map(t2.elementProperties), this._$Ev = /* @__PURE__ */ new Map(), this.hasOwnProperty("properties")) {
       const t3 = this.properties, i2 = [...Object.getOwnPropertyNames(t3), ...Object.getOwnPropertySymbols(t3)];
       for (const s2 of i2)
         this.createProperty(s2, t3[s2]);
@@ -548,25 +553,25 @@ class a extends HTMLElement {
       i2 !== void 0 && s2.push(S(i2));
     return s2;
   }
-  static _$Eh(t2, i2) {
+  static _$Ep(t2, i2) {
     const s2 = i2.attribute;
     return s2 === false ? void 0 : typeof s2 == "string" ? s2 : typeof t2 == "string" ? t2.toLowerCase() : void 0;
   }
-  o() {
+  u() {
     var t2;
-    this._$Ep = new Promise((t3) => this.enableUpdating = t3), this._$AL = /* @__PURE__ */ new Map(), this._$Em(), this.requestUpdate(), (t2 = this.constructor.l) === null || t2 === void 0 || t2.forEach((t3) => t3(this));
+    this._$E_ = new Promise((t3) => this.enableUpdating = t3), this._$AL = /* @__PURE__ */ new Map(), this._$Eg(), this.requestUpdate(), (t2 = this.constructor.h) === null || t2 === void 0 || t2.forEach((t3) => t3(this));
   }
   addController(t2) {
     var i2, s2;
-    ((i2 = this._$Eg) !== null && i2 !== void 0 ? i2 : this._$Eg = []).push(t2), this.renderRoot !== void 0 && this.isConnected && ((s2 = t2.hostConnected) === null || s2 === void 0 || s2.call(t2));
+    ((i2 = this._$ES) !== null && i2 !== void 0 ? i2 : this._$ES = []).push(t2), this.renderRoot !== void 0 && this.isConnected && ((s2 = t2.hostConnected) === null || s2 === void 0 || s2.call(t2));
   }
   removeController(t2) {
     var i2;
-    (i2 = this._$Eg) === null || i2 === void 0 || i2.splice(this._$Eg.indexOf(t2) >>> 0, 1);
+    (i2 = this._$ES) === null || i2 === void 0 || i2.splice(this._$ES.indexOf(t2) >>> 0, 1);
   }
-  _$Em() {
+  _$Eg() {
     this.constructor.elementProperties.forEach((t2, i2) => {
-      this.hasOwnProperty(i2) && (this._$Et.set(i2, this[i2]), delete this[i2]);
+      this.hasOwnProperty(i2) && (this._$Ei.set(i2, this[i2]), delete this[i2]);
     });
   }
   createRenderRoot() {
@@ -576,7 +581,7 @@ class a extends HTMLElement {
   }
   connectedCallback() {
     var t2;
-    this.renderRoot === void 0 && (this.renderRoot = this.createRenderRoot()), this.enableUpdating(true), (t2 = this._$Eg) === null || t2 === void 0 || t2.forEach((t3) => {
+    this.renderRoot === void 0 && (this.renderRoot = this.createRenderRoot()), this.enableUpdating(true), (t2 = this._$ES) === null || t2 === void 0 || t2.forEach((t3) => {
       var i2;
       return (i2 = t3.hostConnected) === null || i2 === void 0 ? void 0 : i2.call(t3);
     });
@@ -585,7 +590,7 @@ class a extends HTMLElement {
   }
   disconnectedCallback() {
     var t2;
-    (t2 = this._$Eg) === null || t2 === void 0 || t2.forEach((t3) => {
+    (t2 = this._$ES) === null || t2 === void 0 || t2.forEach((t3) => {
       var i2;
       return (i2 = t3.hostDisconnected) === null || i2 === void 0 ? void 0 : i2.call(t3);
     });
@@ -593,30 +598,30 @@ class a extends HTMLElement {
   attributeChangedCallback(t2, i2, s2) {
     this._$AK(t2, s2);
   }
-  _$ES(t2, i2, s2 = l$1) {
+  _$EO(t2, i2, s2 = l$1) {
     var e2, r2;
-    const h2 = this.constructor._$Eh(t2, s2);
+    const h2 = this.constructor._$Ep(t2, s2);
     if (h2 !== void 0 && s2.reflect === true) {
       const n2 = ((r2 = (e2 = s2.converter) === null || e2 === void 0 ? void 0 : e2.toAttribute) !== null && r2 !== void 0 ? r2 : o$1.toAttribute)(i2, s2.type);
-      this._$Ei = t2, n2 == null ? this.removeAttribute(h2) : this.setAttribute(h2, n2), this._$Ei = null;
+      this._$El = t2, n2 == null ? this.removeAttribute(h2) : this.setAttribute(h2, n2), this._$El = null;
     }
   }
   _$AK(t2, i2) {
-    var s2, e2, r2;
-    const h2 = this.constructor, n2 = h2._$Eu.get(t2);
-    if (n2 !== void 0 && this._$Ei !== n2) {
-      const t3 = h2.getPropertyOptions(n2), l2 = t3.converter, a2 = (r2 = (e2 = (s2 = l2) === null || s2 === void 0 ? void 0 : s2.fromAttribute) !== null && e2 !== void 0 ? e2 : typeof l2 == "function" ? l2 : null) !== null && r2 !== void 0 ? r2 : o$1.fromAttribute;
-      this._$Ei = n2, this[n2] = a2(i2, t3.type), this._$Ei = null;
+    var s2, e2;
+    const r2 = this.constructor, h2 = r2._$Ev.get(t2);
+    if (h2 !== void 0 && this._$El !== h2) {
+      const t3 = r2.getPropertyOptions(h2), n2 = t3.converter, l2 = (e2 = (s2 = n2 == null ? void 0 : n2.fromAttribute) !== null && s2 !== void 0 ? s2 : typeof n2 == "function" ? n2 : null) !== null && e2 !== void 0 ? e2 : o$1.fromAttribute;
+      this._$El = h2, this[h2] = l2(i2, t3.type), this._$El = null;
     }
   }
   requestUpdate(t2, i2, s2) {
     let e2 = true;
-    t2 !== void 0 && (((s2 = s2 || this.constructor.getPropertyOptions(t2)).hasChanged || n$1)(this[t2], i2) ? (this._$AL.has(t2) || this._$AL.set(t2, i2), s2.reflect === true && this._$Ei !== t2 && (this._$EC === void 0 && (this._$EC = /* @__PURE__ */ new Map()), this._$EC.set(t2, s2))) : e2 = false), !this.isUpdatePending && e2 && (this._$Ep = this._$E_());
+    t2 !== void 0 && (((s2 = s2 || this.constructor.getPropertyOptions(t2)).hasChanged || n$1)(this[t2], i2) ? (this._$AL.has(t2) || this._$AL.set(t2, i2), s2.reflect === true && this._$El !== t2 && (this._$EC === void 0 && (this._$EC = /* @__PURE__ */ new Map()), this._$EC.set(t2, s2))) : e2 = false), !this.isUpdatePending && e2 && (this._$E_ = this._$Ej());
   }
-  async _$E_() {
+  async _$Ej() {
     this.isUpdatePending = true;
     try {
-      await this._$Ep;
+      await this._$E_;
     } catch (t3) {
       Promise.reject(t3);
     }
@@ -630,16 +635,16 @@ class a extends HTMLElement {
     var t2;
     if (!this.isUpdatePending)
       return;
-    this.hasUpdated, this._$Et && (this._$Et.forEach((t3, i3) => this[i3] = t3), this._$Et = void 0);
+    this.hasUpdated, this._$Ei && (this._$Ei.forEach((t3, i3) => this[i3] = t3), this._$Ei = void 0);
     let i2 = false;
     const s2 = this._$AL;
     try {
-      i2 = this.shouldUpdate(s2), i2 ? (this.willUpdate(s2), (t2 = this._$Eg) === null || t2 === void 0 || t2.forEach((t3) => {
+      i2 = this.shouldUpdate(s2), i2 ? (this.willUpdate(s2), (t2 = this._$ES) === null || t2 === void 0 || t2.forEach((t3) => {
         var i3;
         return (i3 = t3.hostUpdate) === null || i3 === void 0 ? void 0 : i3.call(t3);
-      }), this.update(s2)) : this._$EU();
+      }), this.update(s2)) : this._$Ek();
     } catch (t3) {
-      throw i2 = false, this._$EU(), t3;
+      throw i2 = false, this._$Ek(), t3;
     }
     i2 && this._$AE(s2);
   }
@@ -647,32 +652,32 @@ class a extends HTMLElement {
   }
   _$AE(t2) {
     var i2;
-    (i2 = this._$Eg) === null || i2 === void 0 || i2.forEach((t3) => {
+    (i2 = this._$ES) === null || i2 === void 0 || i2.forEach((t3) => {
       var i3;
       return (i3 = t3.hostUpdated) === null || i3 === void 0 ? void 0 : i3.call(t3);
     }), this.hasUpdated || (this.hasUpdated = true, this.firstUpdated(t2)), this.updated(t2);
   }
-  _$EU() {
+  _$Ek() {
     this._$AL = /* @__PURE__ */ new Map(), this.isUpdatePending = false;
   }
   get updateComplete() {
     return this.getUpdateComplete();
   }
   getUpdateComplete() {
-    return this._$Ep;
+    return this._$E_;
   }
   shouldUpdate(t2) {
     return true;
   }
   update(t2) {
-    this._$EC !== void 0 && (this._$EC.forEach((t3, i2) => this._$ES(i2, this[i2], t3)), this._$EC = void 0), this._$EU();
+    this._$EC !== void 0 && (this._$EC.forEach((t3, i2) => this._$EO(i2, this[i2], t3)), this._$EC = void 0), this._$Ek();
   }
   updated(t2) {
   }
   firstUpdated(t2) {
   }
 }
-a.finalized = true, a.elementProperties = /* @__PURE__ */ new Map(), a.elementStyles = [], a.shadowRootOptions = { mode: "open" }, h == null || h({ ReactiveElement: a }), ((s$1 = globalThis.reactiveElementVersions) !== null && s$1 !== void 0 ? s$1 : globalThis.reactiveElementVersions = []).push("1.3.2");
+a.finalized = true, a.elementProperties = /* @__PURE__ */ new Map(), a.elementStyles = [], a.shadowRootOptions = { mode: "open" }, h == null || h({ ReactiveElement: a }), ((s$1 = globalThis.reactiveElementVersions) !== null && s$1 !== void 0 ? s$1 : globalThis.reactiveElementVersions = []).push("1.3.3");
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -681,7 +686,7 @@ a.finalized = true, a.elementProperties = /* @__PURE__ */ new Map(), a.elementSt
 var l, o;
 class s extends a {
   constructor() {
-    super(...arguments), this.renderOptions = { host: this }, this._$Dt = void 0;
+    super(...arguments), this.renderOptions = { host: this }, this._$Do = void 0;
   }
   createRenderRoot() {
     var t2, e2;
@@ -690,15 +695,15 @@ class s extends a {
   }
   update(t2) {
     const i2 = this.render();
-    this.hasUpdated || (this.renderOptions.isConnected = this.isConnected), super.update(t2), this._$Dt = x(i2, this.renderRoot, this.renderOptions);
+    this.hasUpdated || (this.renderOptions.isConnected = this.isConnected), super.update(t2), this._$Do = x(i2, this.renderRoot, this.renderOptions);
   }
   connectedCallback() {
     var t2;
-    super.connectedCallback(), (t2 = this._$Dt) === null || t2 === void 0 || t2.setConnected(true);
+    super.connectedCallback(), (t2 = this._$Do) === null || t2 === void 0 || t2.setConnected(true);
   }
   disconnectedCallback() {
     var t2;
-    super.disconnectedCallback(), (t2 = this._$Dt) === null || t2 === void 0 || t2.setConnected(false);
+    super.disconnectedCallback(), (t2 = this._$Do) === null || t2 === void 0 || t2.setConnected(false);
   }
   render() {
     return b;
@@ -707,7 +712,7 @@ class s extends a {
 s.finalized = true, s._$litElement$ = true, (l = globalThis.litElementHydrateSupport) === null || l === void 0 || l.call(globalThis, { LitElement: s });
 const n = globalThis.litElementPolyfillSupport;
 n == null || n({ LitElement: s });
-((o = globalThis.litElementVersions) !== null && o !== void 0 ? o : globalThis.litElementVersions = []).push("3.2.0");
+((o = globalThis.litElementVersions) !== null && o !== void 0 ? o : globalThis.litElementVersions = []).push("3.2.1");
 var __defProp$1 = Object.defineProperty;
 var __getOwnPropDesc$1 = Object.getOwnPropertyDescriptor;
 var __decorateClass$1 = (decorators, target, key, kind) => {
@@ -724,6 +729,22 @@ function ComponentMixin(constructor) {
     constructor() {
       super(...arguments);
       this.dir = "ltr";
+      this.inspect = false;
+    }
+    set options(options) {
+      const oldValue = {
+        ...this.settings,
+        ...this._options
+      };
+      this._options = {
+        ...this.settings,
+        ...options
+      };
+      this.requestUpdate("options", oldValue);
+    }
+    get options() {
+      var _a;
+      return (_a = this._options) != null ? _a : this.settings;
     }
     get isLTR() {
       return this.dir === "ltr";
@@ -731,22 +752,27 @@ function ComponentMixin(constructor) {
   }
   __decorateClass$1([
     e$6({ type: Object })
-  ], SuperElement.prototype, "options", 2);
+  ], SuperElement.prototype, "options", 1);
   __decorateClass$1([
     e$6({ reflect: true })
   ], SuperElement.prototype, "dir", 2);
+  __decorateClass$1([
+    e$6({ reflect: true, type: Boolean })
+  ], SuperElement.prototype, "inspect", 2);
   return SuperElement;
 }
 class ComponentElement extends ComponentMixin(s) {
   constructor(registry) {
     super();
     this.registry = Object.freeze(registry);
+    this.dataset.qa = registry.qa;
   }
 }
-function defineWebComponent(name, component, options) {
-  Object.defineProperty(component.prototype, "options", {
+function defineWebComponent(name, component, options = {}) {
+  Object.defineProperty(component.prototype, "settings", {
     enumerable: true,
-    value: options
+    value: options,
+    writable: true
   });
   window.customElements.define(name, component);
   return component;
@@ -805,7 +831,6 @@ class WsLoader extends ComponentElement {
     this.identifier = uniqueID();
     const classes = this.options.className;
     this.classList.add(...classes);
-    this.dataset.qa = metadata.qa;
   }
   get element() {
     return { element: this.elRef, registry: this.registry };
@@ -834,5 +859,5 @@ __decorateClass([
 ], WsLoader.prototype, "scope", 2);
 const registerComponent = (options = {}, name = "ws-loader") => defineWebComponent(name, WsLoader, { className: ["ws-loader"], ...options });
 registerComponent();
-export { WsLoader };
+export { WsLoader, registerComponent as registerLoaderComponent };
 //# sourceMappingURL=wbs-loader.es.js.map

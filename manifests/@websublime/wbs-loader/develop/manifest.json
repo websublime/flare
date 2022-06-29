@@ -1,0 +1,12 @@
+{
+    "name": "wbs-loader",
+    "version": "0.0.0",
+    "scope": "@websublime",
+    "repo": "websublime/sublime-ui",
+    "scripts": {
+        "main": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-loader@0.0.0-SNAPSHOT/wbs-loader.cjs.js",
+        "esm": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-loader@0.0.0-SNAPSHOT/wbs-loader.es.js"
+    },
+    "styles": [],
+    "docs": ""
+}

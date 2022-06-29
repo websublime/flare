@@ -265,7 +265,25 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ");\n  }"
+                  "text": ");\n    this."
+                },
+                {
+                  "kind": "Reference",
+                  "text": "dataset",
+                  "canonicalReference": "!HTMLOrSVGElement#dataset"
+                },
+                {
+                  "kind": "Content",
+                  "text": ".qa = "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "registry.qa",
+                  "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#qa"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n  }"
                 }
               ],
               "releaseTag": "Public",
@@ -284,8 +302,37 @@
             },
             {
               "kind": "Property",
-              "canonicalReference": "@websublime/wbs-ui-common!ComponentElement#registry:member",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentElement#inspect:member",
               "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "declare inspect: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "inspect",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentElement#registry:member",
+              "docComment": "/**\n * @public\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -570,7 +617,97 @@
             },
             {
               "kind": "Content",
-              "text": " {\n    // TODO: merge options from defineWebComponent\n    @"
+              "text": " {\n    readonly settings!: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WebComponentOptions",
+              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n\n    protected _options!: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WebComponentOptions",
+              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n\n    set options(options: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WebComponentOptions",
+              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") {\n      const oldValue = {\n        ...this."
+            },
+            {
+              "kind": "Reference",
+              "text": "settings",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#settings"
+            },
+            {
+              "kind": "Content",
+              "text": ",\n        ...this."
+            },
+            {
+              "kind": "Reference",
+              "text": "_options",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#_options"
+            },
+            {
+              "kind": "Content",
+              "text": "\n      };\n\n      this."
+            },
+            {
+              "kind": "Reference",
+              "text": "_options",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#_options"
+            },
+            {
+              "kind": "Content",
+              "text": " = {\n        ...this."
+            },
+            {
+              "kind": "Reference",
+              "text": "settings",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#settings"
+            },
+            {
+              "kind": "Content",
+              "text": ",\n        ..."
+            },
+            {
+              "kind": "Reference",
+              "text": "options",
+              "canonicalReference": "@websublime/wbs-ui-common!~options"
+            },
+            {
+              "kind": "Content",
+              "text": "\n      };\n\n      this."
+            },
+            {
+              "kind": "Reference",
+              "text": "requestUpdate",
+              "canonicalReference": "@lit/reactive-element!ReactiveElement#requestUpdate"
+            },
+            {
+              "kind": "Content",
+              "text": "('options', "
+            },
+            {
+              "kind": "Reference",
+              "text": "oldValue",
+              "canonicalReference": "@websublime/wbs-ui-common!~oldValue"
+            },
+            {
+              "kind": "Content",
+              "text": ");\n    }\n\n    @"
             },
             {
               "kind": "Reference",
@@ -597,16 +734,25 @@
             },
             {
               "kind": "Content",
-              "text": " })\n    options!: "
+              "text": " })\n    get options() {\n      return this."
             },
             {
               "kind": "Reference",
-              "text": "WebComponentOptions",
-              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+              "text": "_options",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#_options"
             },
             {
               "kind": "Content",
-              "text": ";\n\n    @"
+              "text": " ?? this."
+            },
+            {
+              "kind": "Reference",
+              "text": "settings",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#settings"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    }\n\n    @"
             },
             {
               "kind": "Reference",
@@ -624,7 +770,43 @@
             },
             {
               "kind": "Content",
-              "text": ": true })\n    public dir: 'ltr' | 'rtl' = 'ltr';\n\n    public get isLTR(): boolean {\n      return this."
+              "text": ": true })\n    public dir: 'ltr' | 'rtl' = 'ltr';\n\n    @"
+            },
+            {
+              "kind": "Reference",
+              "text": "property",
+              "canonicalReference": "@lit/reactive-element!property"
+            },
+            {
+              "kind": "Content",
+              "text": "({ "
+            },
+            {
+              "kind": "Reference",
+              "text": "reflect",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#reflect"
+            },
+            {
+              "kind": "Content",
+              "text": ": true, "
+            },
+            {
+              "kind": "Reference",
+              "text": "type",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#type"
+            },
+            {
+              "kind": "Content",
+              "text": ": "
+            },
+            {
+              "kind": "Reference",
+              "text": "Boolean",
+              "canonicalReference": "!Boolean:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " })\n    public inspect = false;\n\n    public get isLTR(): boolean {\n      return this."
             },
             {
               "kind": "Reference",
@@ -719,6 +901,33 @@
             },
             {
               "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface#inspect:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "inspect: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "inspect",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
               "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface#isLTR:member",
               "docComment": "",
               "excerptTokens": [
@@ -767,6 +976,34 @@
               "isOptional": false,
               "releaseTag": "Public",
               "name": "options",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface#settings:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly settings: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "WebComponentOptions",
+                  "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "settings",
               "propertyTypeTokenRange": {
                 "startIndex": 1,
                 "endIndex": 2
@@ -858,7 +1095,7 @@
             },
             {
               "kind": "Content",
-              "text": ",\n  options?: "
+              "text": ",\n  options: "
             },
             {
               "kind": "Reference",
@@ -867,11 +1104,11 @@
             },
             {
               "kind": "Content",
-              "text": "\n"
+              "text": " "
             },
             {
               "kind": "Content",
-              "text": "): "
+              "text": "= {}\n): "
             },
             {
               "kind": "Content",
@@ -897,7 +1134,7 @@
             },
             {
               "kind": "Content",
-              "text": ", 'options', {\n    "
+              "text": ", 'settings', {\n    "
             },
             {
               "kind": "Reference",
@@ -924,7 +1161,16 @@
             },
             {
               "kind": "Content",
-              "text": "\n  });\n\n  "
+              "text": ",\n    "
+            },
+            {
+              "kind": "Reference",
+              "text": "writable",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#writable"
+            },
+            {
+              "kind": "Content",
+              "text": ": true\n  });\n\n  "
             },
             {
               "kind": "Reference",

@@ -730,6 +730,9 @@ function ComponentMixin(constructor) {
     }
   }
   __decorateClass$1([
+    e$6({ type: Object })
+  ], SuperElement.prototype, "options", 2);
+  __decorateClass$1([
     e$6({ reflect: true })
   ], SuperElement.prototype, "dir", 2);
   return SuperElement;
@@ -830,5 +833,6 @@ __decorateClass([
   e$6({ type: String })
 ], WsLoader.prototype, "scope", 2);
 const registerComponent = (options = {}, name = "ws-loader") => defineWebComponent(name, WsLoader, { className: ["ws-loader"], ...options });
-export { WsLoader, registerComponent as default };
+registerComponent();
+export { WsLoader };
 //# sourceMappingURL=wbs-loader.es.js.map

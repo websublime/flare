@@ -1,0 +1,12 @@
+{
+    "name": "wbs-ui-header",
+    "version": "0.0.2",
+    "scope": "@websublime",
+    "repo": "websublime/sublime-ui",
+    "scripts": {
+        "main": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-header@0.0.2-SNAPSHOT/wbs-ui-header.umd.js",
+        "esm": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-header@0.0.2-SNAPSHOT/wbs-ui-header.es.js"
+    },
+    "styles": [],
+    "docs": ""
+}

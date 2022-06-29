@@ -74,7 +74,11 @@ Constructor<ReactiveElement>
         super();
 
         this.registry = Object.freeze(registry);
+        this.dataset.qa = registry.qa;
     }
+
+    // (undocumented)
+    inspect: boolean;
 
     // (undocumented)
     public registry: ComponentMetadata;
@@ -102,19 +106,45 @@ constructor: T
 ): T & Constructor<ComponentMixinInterface> {
     // (undocumented)
     export class SuperElement extends constructor {
-        // TODO: merge options from defineWebComponent
         // (undocumented)
         @property({ reflect: true })
         public dir: 'ltr' | 'rtl' = 'ltr';
+
+        // (undocumented)
+        @property({ reflect: true, type: Boolean })
+        public inspect = false;
 
         // (undocumented)
         public get isLTR(): boolean {
             return this.dir === 'ltr';
         }
 
+        set options(options: WebComponentOptions) {
+            const // (undocumented)
+            oldValue = {
+                ...this.settings,
+                ...this._options
+            };
+
+            this._options = {
+                ...this.settings,
+                ...options
+            };
+
+            this.requestUpdate('options', oldValue);
+        }
+
         // (undocumented)
         @property({ type: Object })
-        options!: WebComponentOptions;
+        get options() {
+            return this._options ?? this.settings;
+        }
+
+        // (undocumented)
+        protected _options!: WebComponentOptions;
+
+        // (undocumented)
+        readonly settings!: WebComponentOptions;
     }
 
     return SuperElement;
@@ -125,9 +155,13 @@ export interface ComponentMixinInterface {
     // (undocumented)
     dir: 'ltr' | 'rtl';
     // (undocumented)
+    inspect: boolean;
+    // (undocumented)
     isLTR: boolean;
     // (undocumented)
     options: WebComponentOptions;
+    // (undocumented)
+    readonly settings: WebComponentOptions;
 }
 
 // @public (undocumented)
@@ -145,11 +179,12 @@ export { customElement }
 export function defineWebComponent<WebComponent extends ComponentElement>(
 name: string,
 component: new () => WebComponent,
-options?: WebComponentOptions
+options: WebComponentOptions = {}
 ): new () => WebComponent {
-    Object.defineProperty(component.prototype, 'options', {
+    Object.defineProperty(component.prototype, 'settings', {
         enumerable: true,
-        value: options
+        value: options,
+        writable: true
     });
 
     window.customElements.define(name, component);

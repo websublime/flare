@@ -1,0 +1,12 @@
+{
+    "name": "wbs-ui-inspector",
+    "version": "0.0.3",
+    "scope": "@websublime",
+    "repo": "websublime/sublime-ui",
+    "scripts": {
+        "main": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-inspector@0.0.3-SNAPSHOT/wbs-ui-inspector.umd.js",
+        "esm": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-inspector@0.0.3-SNAPSHOT/wbs-ui-inspector.es.js"
+    },
+    "styles": [],
+    "docs": ""
+}

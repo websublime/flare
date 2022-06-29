@@ -173,6 +173,42 @@
       "preserveMemberOrder": false,
       "members": [
         {
+          "kind": "Variable",
+          "canonicalReference": "@websublime/wbs-loader!registerLoaderComponent:var",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "registerComponent: "
+            },
+            {
+              "kind": "Content",
+              "text": "(options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WsLoaderOptions",
+              "canonicalReference": "@websublime/wbs-loader!~WsLoaderOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", name?: string) => new () => "
+            },
+            {
+              "kind": "Reference",
+              "text": "WsLoader",
+              "canonicalReference": "@websublime/wbs-loader!WsLoader:class"
+            }
+          ],
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "registerLoaderComponent",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
           "kind": "Class",
           "canonicalReference": "@websublime/wbs-loader!WsLoader:class",
           "docComment": "/**\n * Loader component element\n */\n",

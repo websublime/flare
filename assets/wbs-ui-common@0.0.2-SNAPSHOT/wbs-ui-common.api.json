@@ -1,0 +1,1513 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.28.1",
+    "schemaVersion": 1008,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@websublime/wbs-ui-common!",
+  "docComment": "",
+  "name": "@websublime/wbs-ui-common",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@websublime/wbs-ui-common!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Class",
+          "canonicalReference": "@websublime/wbs-ui-common!ComponentElement:class",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export class ComponentElement extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "ComponentMixin",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixin"
+            },
+            {
+              "kind": "Content",
+              "text": "<\n  "
+            },
+            {
+              "kind": "Reference",
+              "text": "Constructor",
+              "canonicalReference": "@websublime/wbs-ui-common!Constructor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ReactiveElement",
+              "canonicalReference": "@lit/reactive-element!ReactiveElement:class"
+            },
+            {
+              "kind": "Content",
+              "text": ">\n>("
+            },
+            {
+              "kind": "Reference",
+              "text": "LitElement",
+              "canonicalReference": "lit-element!LitElement:class"
+            },
+            {
+              "kind": "Content",
+              "text": ") "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ComponentElement",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentElement:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `ComponentElement` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(registry: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ComponentMetadata",
+                  "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") {\n    super();\n\n    this."
+                },
+                {
+                  "kind": "Reference",
+                  "text": "registry",
+                  "canonicalReference": "@websublime/wbs-ui-common!ComponentElement#registry"
+                },
+                {
+                  "kind": "Content",
+                  "text": " = "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Object.freeze",
+                  "canonicalReference": "!ObjectConstructor#freeze"
+                },
+                {
+                  "kind": "Content",
+                  "text": "("
+                },
+                {
+                  "kind": "Reference",
+                  "text": "registry",
+                  "canonicalReference": "@websublime/wbs-ui-common!~registry"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");\n  }"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "registry",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentElement#registry:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "public registry: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ComponentMetadata",
+                  "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "registry",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false
+            }
+          ],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 8
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ComponentMetadata "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ComponentMetadata",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#description:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "description: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "description",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#link:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "link: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "link",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#name:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#qa:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "qa: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "qa",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#scope:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "scope: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "scope",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMetadata#version:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "version: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "version",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@websublime/wbs-ui-common!ComponentMixin:function(1)",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export function ComponentMixin<T extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Constructor",
+              "canonicalReference": "@websublime/wbs-ui-common!Constructor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ReactiveElement",
+              "canonicalReference": "@lit/reactive-element!ReactiveElement:class"
+            },
+            {
+              "kind": "Content",
+              "text": ">"
+            },
+            {
+              "kind": "Content",
+              "text": ">(\n  constructor: "
+            },
+            {
+              "kind": "Content",
+              "text": "T\n"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "T & "
+            },
+            {
+              "kind": "Reference",
+              "text": "Constructor",
+              "canonicalReference": "@websublime/wbs-ui-common!Constructor:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ComponentMixinInterface",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n  class SuperElement extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "constructor",
+              "canonicalReference": "@websublime/wbs-ui-common!~constructor"
+            },
+            {
+              "kind": "Content",
+              "text": " {\n    // TODO: merge options from defineWebComponent\n    @"
+            },
+            {
+              "kind": "Reference",
+              "text": "property",
+              "canonicalReference": "@lit/reactive-element!property"
+            },
+            {
+              "kind": "Content",
+              "text": "({ "
+            },
+            {
+              "kind": "Reference",
+              "text": "type",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#type"
+            },
+            {
+              "kind": "Content",
+              "text": ": "
+            },
+            {
+              "kind": "Reference",
+              "text": "Object",
+              "canonicalReference": "!Object:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " })\n    options!: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WebComponentOptions",
+              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n\n    @"
+            },
+            {
+              "kind": "Reference",
+              "text": "property",
+              "canonicalReference": "@lit/reactive-element!property"
+            },
+            {
+              "kind": "Content",
+              "text": "({ "
+            },
+            {
+              "kind": "Reference",
+              "text": "reflect",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#reflect"
+            },
+            {
+              "kind": "Content",
+              "text": ": true })\n    public dir: 'ltr' | 'rtl' = 'ltr';\n\n    public get isLTR(): boolean {\n      return this."
+            },
+            {
+              "kind": "Reference",
+              "text": "dir",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement#dir"
+            },
+            {
+              "kind": "Content",
+              "text": " === 'ltr';\n    }\n  }\n\n  return "
+            },
+            {
+              "kind": "Reference",
+              "text": "SuperElement",
+              "canonicalReference": "@websublime/wbs-ui-common!~SuperElement:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 8,
+            "endIndex": 12
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "constructor",
+              "parameterTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "isOptional": false
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "ComponentMixin"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ComponentMixinInterface "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ComponentMixinInterface",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface#dir:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "dir: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "'ltr' | 'rtl'"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "dir",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface#isLTR:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isLTR: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "isLTR",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentMixinInterface#options:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "options: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "WebComponentOptions",
+                  "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "options",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@websublime/wbs-ui-common!Constructor:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type Constructor<T = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string, unknown>"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n  // eslint-disable-next-line @typescript-eslint/no-explicit-any\n  new (...arguments_: any[]): T;\n  prototype: T;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Constructor",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 4,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@websublime/wbs-ui-common!defineWebComponent:function(1)",
+          "docComment": "/**\n * Register a custom element Lit class component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export function defineWebComponent<WebComponent extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "ComponentElement",
+              "canonicalReference": "@websublime/wbs-ui-common!ComponentElement:class"
+            },
+            {
+              "kind": "Content",
+              "text": ">(\n  name: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ",\n  component: "
+            },
+            {
+              "kind": "Content",
+              "text": "new () => WebComponent"
+            },
+            {
+              "kind": "Content",
+              "text": ",\n  options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "WebComponentOptions",
+              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "\n"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "new () => WebComponent "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n  "
+            },
+            {
+              "kind": "Reference",
+              "text": "Object.defineProperty",
+              "canonicalReference": "!ObjectConstructor#defineProperty"
+            },
+            {
+              "kind": "Content",
+              "text": "("
+            },
+            {
+              "kind": "Reference",
+              "text": "component.prototype",
+              "canonicalReference": "!Function#prototype"
+            },
+            {
+              "kind": "Content",
+              "text": ", 'options', {\n    "
+            },
+            {
+              "kind": "Reference",
+              "text": "enumerable",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#enumerable"
+            },
+            {
+              "kind": "Content",
+              "text": ": true,\n    "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "@websublime/wbs-ui-common!~__object#value"
+            },
+            {
+              "kind": "Content",
+              "text": ": "
+            },
+            {
+              "kind": "Reference",
+              "text": "options",
+              "canonicalReference": "@websublime/wbs-ui-common!~options"
+            },
+            {
+              "kind": "Content",
+              "text": "\n  });\n\n  "
+            },
+            {
+              "kind": "Reference",
+              "text": "window.customElements.define",
+              "canonicalReference": "!CustomElementRegistry#define"
+            },
+            {
+              "kind": "Content",
+              "text": "("
+            },
+            {
+              "kind": "Reference",
+              "text": "name",
+              "canonicalReference": "@websublime/wbs-ui-common!~name"
+            },
+            {
+              "kind": "Content",
+              "text": ", "
+            },
+            {
+              "kind": "Reference",
+              "text": "component",
+              "canonicalReference": "@websublime/wbs-ui-common!~component"
+            },
+            {
+              "kind": "Content",
+              "text": ");\n\n  return "
+            },
+            {
+              "kind": "Reference",
+              "text": "component",
+              "canonicalReference": "@websublime/wbs-ui-common!~component"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 10,
+            "endIndex": 11
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "name",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "component",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "options",
+              "parameterTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "isOptional": true
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "WebComponent",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "defineWebComponent"
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@websublime/wbs-ui-common!EventController:class",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export class EventController "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "EventController",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@websublime/wbs-ui-common!EventController:constructor(1)",
+              "docComment": "/**\n * Constructs a new instance of the `EventController` class\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(host: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReactiveControllerHost",
+                  "canonicalReference": "@lit/reactive-element!ReactiveControllerHost:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") {\n    this."
+                },
+                {
+                  "kind": "Reference",
+                  "text": "host",
+                  "canonicalReference": "@websublime/wbs-ui-common!EventController#host"
+                },
+                {
+                  "kind": "Content",
+                  "text": " = "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "host",
+                  "canonicalReference": "@websublime/wbs-ui-common!~host"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n\n    "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "host.addController",
+                  "canonicalReference": "@lit/reactive-element!ReactiveControllerHost#addController"
+                },
+                {
+                  "kind": "Content",
+                  "text": "(this as any);\n  }"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "host",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@websublime/wbs-ui-common!EventController#notify:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "async notify(dispatcher: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(resolved: boolean) => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") {\n    const resolved = await this."
+                },
+                {
+                  "kind": "Reference",
+                  "text": "host.updateComplete",
+                  "canonicalReference": "@lit/reactive-element!ReactiveControllerHost#updateComplete"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n\n    "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "dispatcher",
+                  "canonicalReference": "@websublime/wbs-ui-common!~dispatcher"
+                },
+                {
+                  "kind": "Content",
+                  "text": "("
+                },
+                {
+                  "kind": "Reference",
+                  "text": "resolved",
+                  "canonicalReference": "@websublime/wbs-ui-common!~resolved"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");\n  }"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "dispatcher",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "name": "notify"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@websublime/wbs-ui-common!isEmpty:var",
+          "docComment": "/**\n * Checks if value is an empty object or collection.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isEmpty = "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: any) =>\n  ["
+            },
+            {
+              "kind": "Reference",
+              "text": "Object",
+              "canonicalReference": "!Object:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "]."
+            },
+            {
+              "kind": "Reference",
+              "text": "includes",
+              "canonicalReference": "!Array#includes"
+            },
+            {
+              "kind": "Content",
+              "text": "(("
+            },
+            {
+              "kind": "Reference",
+              "text": "obj",
+              "canonicalReference": "@websublime/wbs-ui-common!~obj"
+            },
+            {
+              "kind": "Content",
+              "text": " || {}).constructor) &&\n  !"
+            },
+            {
+              "kind": "Reference",
+              "text": "Object.entries",
+              "canonicalReference": "!ObjectConstructor#entries"
+            },
+            {
+              "kind": "Content",
+              "text": "("
+            },
+            {
+              "kind": "Reference",
+              "text": "obj",
+              "canonicalReference": "@websublime/wbs-ui-common!~obj"
+            },
+            {
+              "kind": "Content",
+              "text": " || {})."
+            },
+            {
+              "kind": "Reference",
+              "text": "length",
+              "canonicalReference": "!Array#length"
+            }
+          ],
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 15
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isEmpty",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@websublime/wbs-ui-common!isNil:var",
+          "docComment": "/**\n * Checks if value is null or undefined.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isNil = "
+            },
+            {
+              "kind": "Content",
+              "text": "(value: any) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "@websublime/wbs-ui-common!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " === null || "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "@websublime/wbs-ui-common!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " === "
+            },
+            {
+              "kind": "Reference",
+              "text": "undefined",
+              "canonicalReference": "!undefined"
+            }
+          ],
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "isNil",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@websublime/wbs-ui-common!Sizes:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type Sizes = "
+            },
+            {
+              "kind": "Content",
+              "text": "'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Sizes",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@websublime/wbs-ui-common!uniqueID:var",
+          "docComment": "/**\n * Creates a unique identifier\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "uniqueID = "
+            },
+            {
+              "kind": "Content",
+              "text": "() => {\n  const head = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Date.now",
+              "canonicalReference": "!DateConstructor#now"
+            },
+            {
+              "kind": "Content",
+              "text": "()."
+            },
+            {
+              "kind": "Reference",
+              "text": "toString",
+              "canonicalReference": "!Number#toString"
+            },
+            {
+              "kind": "Content",
+              "text": "(36);\n  const tail = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Math.random",
+              "canonicalReference": "!Math#random"
+            },
+            {
+              "kind": "Content",
+              "text": "()."
+            },
+            {
+              "kind": "Reference",
+              "text": "toString",
+              "canonicalReference": "!Number#toString"
+            },
+            {
+              "kind": "Content",
+              "text": "(36)."
+            },
+            {
+              "kind": "Reference",
+              "text": "substr",
+              "canonicalReference": "!String#substr"
+            },
+            {
+              "kind": "Content",
+              "text": "(2);\n\n  return "
+            },
+            {
+              "kind": "Reference",
+              "text": "head",
+              "canonicalReference": "@websublime/wbs-ui-common!~head"
+            },
+            {
+              "kind": "Content",
+              "text": " + "
+            },
+            {
+              "kind": "Reference",
+              "text": "tail",
+              "canonicalReference": "@websublime/wbs-ui-common!~tail"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            }
+          ],
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 16
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "uniqueID",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@websublime/wbs-ui-common!ValueOf:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type ValueOf<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Content",
+              "text": "T[keyof T]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ValueOf",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface WebComponentOptions "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "WebComponentOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "@websublime/wbs-ui-common!WebComponentOptions:index(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}

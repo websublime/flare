@@ -4,7 +4,7 @@
     "scope": "@websublime",
     "repo": "websublime/sublime-ui",
     "scripts": {
-        "main": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-common@0.0.2-SNAPSHOT/wbs-ui-common.cjs.js",
+        "main": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-common@0.0.2-SNAPSHOT/wbs-ui-common.umd.js",
         "esm": "https://cdn.jsdelivr.net/gh/websublime/flare/assets/wbs-ui-common@0.0.2-SNAPSHOT/wbs-ui-common.es.js"
     },
     "styles": [],

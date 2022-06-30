@@ -794,6 +794,7 @@ const scriptLoader = async (scope, name) => {
     let moduleScript = document.createElement("script");
     let noModuleScript = document.createElement("script");
     moduleScript.setAttribute("src", manifest.scripts.esm);
+    moduleScript.setAttribute("defer", "");
     moduleScript.setAttribute("async", "");
     moduleScript.setAttribute("type", "module");
     noModuleScript.setAttribute("src", manifest.scripts.main);
